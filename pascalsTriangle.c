@@ -7,32 +7,39 @@ int main()
     rows = row - 1;
     middle = rows / 2;
 
+    // first row
     for (int i = 1; i <= rows; i++)
 
     {
-        printf(" _ ");
+        printf(" ");
     }
+    printf("%d", 1);
+    printf("\n");
 
-    printf(" 1 \n");
-
+    // all rows
     for (int i = 1; i <= rows; i++)
     {
+        int a, b;
         for (int k = rows; k > i; k-- )
 
-        {
-            printf(" _ ");
+        {   
+            
+            printf(" ");
 
         }
         
-        printf("1");
-        // spaces inside
+        printf("%d", 1);
+
+        // inside
         for (int j = rows + i-2; j >= rows - i; j-- )
 
         {
-            printf(" _ ");
+            // printf(" %d ", 2);
+            printf(" ");
 
         }
-        printf("1\n");
+        printf("%d", 1);
+        printf("\n");
         
     }
 }
