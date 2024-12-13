@@ -2,44 +2,32 @@
 
 int main()
 {
-    int row,rows, middle;
-    scanf("%d", &row);
-    rows = row - 1;
-    middle = rows / 2;
+    int rows,c;
+    scanf("%d", &rows);
 
-    // first row
-    for (int i = 1; i <= rows; i++)
-
+    for (int i = 0; i < rows; i++)
     {
-        printf(" ");
-    }
-    printf("%d", 1);
-    printf("\n");
+        // spaces
 
-    // all rows
-    for (int i = 1; i <= rows; i++)
-    {
-        int a, b;
-        for (int k = rows; k > i; k-- )
-
-        {   
-            
-            printf(" ");
-
-        }
-        
-        printf("%d", 1);
-
-        // inside
-        for (int j = rows + i-2; j >= rows - i; j-- )
-
+        for (int j = 0; j < rows - i - 1; j++)
         {
-            // printf(" %d ", 2);
-            printf(" ");
-
+            printf("  ");
         }
-        printf("%d", 1);
+
+        for (int j = 0; j <= i; j++)
+        {
+            if (i == 0 || j == 0)
+            {
+                c = 1;
+            }
+            else
+            {
+                c = ( c * (i - j + 1) ) / j;
+            }
+
+            printf(" %2d ", c);
+        }
+
         printf("\n");
-        
     }
 }
